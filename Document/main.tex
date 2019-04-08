@@ -1,0 +1,43 @@
+\documentclass[report]{IEEEtran}
+%\documentclass[paper=a4, fontsize=11pt]{scrartcl}
+
+\usepackage{graphicx}
+% Prevent pdflatex from adding suffix to eps files
+\usepackage{epstopdf}
+\epstopdfsetup{suffix=}
+
+\usepackage[hidelinks]{hyperref} % Hyperlinks without boxes
+
+\usepackage{algorithmicx}
+\usepackage{amsopn}	% DeclareMathOperator
+
+\usepackage{multirow}
+\usepackage{array}
+
+%\usepackage{cite}
+
+
+% Convenient function names & operators
+\DeclareMathOperator{\sinc}{sinc}
+\DeclareMathOperator{\DFT}{DFT}
+\DeclareMathOperator{\vertcat}{vertcat}
+\DeclareMathOperator{\horzcat}{horzcat}
+\DeclareMathOperator{\flipud}{flipud}
+\DeclareMathOperator{\fliplr}{fliplr}
+\newcommand{\pluseq}{\mathrel{+}=}
+
+
+\title{X-Ray CT, Inversion of the Radon transform}
+\author{Zhexian Sun, Michael Walker, Hanru Zhang}
+
+\begin{document}
+	\maketitle
+	
+	\section{Introduction}
+	\input{introduction}
+	
+	
+	% ---- Bibliography ----
+	\bibliographystyle{IEEEtran}
+	\bibliography{IEEEabrv,bib}	
+\end{document}

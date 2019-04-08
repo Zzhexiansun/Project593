@@ -1,0 +1,11 @@
+/*.bbl
+/*.log
+/*.blg
+/*.toc
+/main.synctex.gz
+/main.aux
+/*.out
+/*.pdf
+
+# But not...
+! main.pdf
