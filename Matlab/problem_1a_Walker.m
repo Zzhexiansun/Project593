@@ -11,7 +11,7 @@ printcomment = @(varargin)fprintf('%-60s %5.1fs\n',sprintf(varargin{:}),toc);
 %% Load data
 printcomment('Loading data...');
 load project_data
-%{
+%%{
 % Decimate 2x
 sinogram(:,2:2:end) = [];
 sinogram(2:2:end,:) = [];
@@ -35,6 +35,7 @@ K = paralleltomo(N, theta, p,N*(p-1)/p);
 L = 0.06144;
 pixel_size = L/N;
 K = K*pixel_size;
+imgref = imgref*pixel_size;
 %}
 
 %%
@@ -84,7 +85,7 @@ for it = 1:1e3
         printcomment('  iteration %d',it);
         %%{
         m_plt = m_last;
-        figure(6)
+        figure(2)
         clf;
         subplot(121);
         imagesc(reshape(m_plt, N, N));
